@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float,display,propertie</title>
+  </head>
+  <style>
+    body {
+      height: 700px;
+      border: 2px solid black;
+    }
+    div {
+      width: 100px;
+      height: 100px;
+    }
+    #first {
+      background-color: cadetblue;
+      /* position: static; */
+      /* position: relative; */
+      /* relative lenge -> isse ik power unlock hogyi ie top left right bottom
+      define -> relative to its normal position [means jo bhi element hai vo actual position 
+      se change hoga] */
+      /* position: absolute; */
+      /* position absolute -> means its relative to its first parent 
+        yeh abhi apni parent ki potiion se utne ka distance bnalega
+      */
+      width: initial;
+      /* top: 20px;
+      left: 50px; */
+
+      /* position: sticky;
+      top: 0px; */
+      /* position sticky means top se itni dur fixed rhegi sara content move hoga yeh move nhi hogi 
+        and posiion:fixed ke sth top right me se bhi kuch denge even sari properties ke sth denge top right
+        */
+
+      position: fixed;
+      bottom: 50px;
+      right: 50px;
+      /* position:fixed -> means ik jgh pr fixed hojega permanently */
+      
+    }
+    #second {
+      background-color: rgb(106, 245, 25);
+      /* position: absolute; */
+      /* top: 20px;
+      left: 50px; */
+    }
+    #third {
+      background-color: rgb(255, 153, 0);
+      /* position: absolute; */
+      /* top: 20px;
+      left: 50px; */
+    }
+  </style>
+  <body>
+    <div id="first">NAVBAR</div>
+    <div id="second">2</div>
+    <div id="third">3</div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+div {
+  width: 100px;
+  height: 100px;
+  font-size: x-large;
+  background-color: palevioletred;
+}
+
+/* As we know div is block level element, so body ko flex container bnaege
+o sare div row me ajege because default direction is in row format 
+*/
+body {
+  margin: 0px;
+  width: 80vw;
+  height: 80vh;
+  display: flex;
+
+  /* properties of flex box */
+
+  /* Note -> justify content is for x axis ie main axis  and 
+  IMPORTANT NOT -> JUSTIFY CONTENT AND ALIGN ITEM FLEX BOX KO DENGE*/
+
+  justify-content: center; /* justify cntent -> means isme jitni bhi item hai unki aat hori hai */
+  justify-content: flex-start;
+  justify-content: flex-end;
+  justify-content: space-around; /* space around -> isse jitne bhi div hai sabka margin equal hojata hai - left or right corner wale item me bhi space aajega mean overall left or right me margin equally ajata hai*/
+  justify-content: space-between; /* space-between - iise 1st and last  item ke bheech me space nhi aayega */
+  justify-content: space-evenly; /* space evenly isse equally sabme space aayega koi sare boxes me equal spaces hojegi */
+
+  /* align-items -> this is for cross axis Y axis */
+  align-items: center; /*similar properties hai */
+  /* align-items: flex-end;
+  align-items: start; */
+
+  flex-direction: column;
+  flex-direction: column-reverse;
+  flex-direction: row-reverse;
+  flex: wrap;
+  flex-wrap: wrap; /* Jo box ka size hai vohi rhega change nahi hoga size*/
+  align-content: center; /* agr wrap hone ke baad andr bhi space bnale to we use this property*/
+
+  /* Note-> justify-content is for x axis column ad align items for Y axis item ko along properites k liye */
+}
+
+/* PROPERTES FOR FLEX ITEMS */
+.two {
+  /* align-self: flex-end; */
+}

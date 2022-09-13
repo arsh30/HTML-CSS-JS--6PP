@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RESPONSIVENESS</title>
+    <style>
+      body {
+        background-color: rgb(255, 222, 180);
+      }
+
+      div {
+        height: 120px;
+        width: 120px;
+        background-color: brown;
+        margin: 40px;
+        /* Try to use vw instead of pixel in responsiveness */
+      }
+
+      @media all and (max-width: 600px) {
+        /* means jo iske andr likhege vo max width 600 px */
+        body {
+          background-color: aqua;
+          /* to iske andr hum apna navbar bdl skte hai width vgara adjust kr skte hai 
+          Note: overflow: property agr kaam nahi kregi toh body ko denge 
+          
+          basic math -> 400px kitna percent hai 1920px ka? 400 % 1920 * 100
+          */
+        }
+        div {
+          background-color: greenyellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </body>
+</html>

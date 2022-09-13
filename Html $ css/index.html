@@ -1,0 +1,273 @@
+<!-- How website works ?
+sol) client hits the request on some particular url, and each webiste have their database which
+     sends the response to the client basically server send the html,css,js file send to the client 
+    
+2) Frontend languages ?
+sol) Html -> It basically provides the skeleton of the webpage how our webpage look like 
+     css (cascading style sheet) -> It is used to styling the elements that we created through the html 
+     Javascript ->  It provides logic to the websites.eg we have some events like what will after clicking on this btn
+
+
+3) HTML SYNTAX -> 
+    <html> 
+        <head> </head> // it contains all the head information which is not visible and have Meta tags and title tags
+        <body> </body> // jo bhi isme likhege vo sab website me show hoga
+    </html>
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>intro video</title>
+  </head>
+  <body>
+    <!-- br is the line break tag -->
+
+    <!-- hr -> it is horizontal draw line draw krne k liye
+
+     b -> bold tag  -> it is inline element means jese ik space khtm hogi dusra aajega
+       
+     i -> Italic tag  -> it is also inline element-->
+
+    <h1>Heading 1 -> This is Also a BLOCK level Element</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <hr />
+
+    <p>
+      Hello This is Arshdeep Singh. It is paragraph tag used to write the
+      paragraphs
+    </p>
+
+    <p>
+      Hello p tag is the BLOCK level Element means puri row contain krta hai yeh
+    </p>
+
+    <hr />
+
+    <em>Hello</em>
+    <br />
+
+    <em>
+      em tag is emphasized text. and It is Inline element means sth me aata
+      aayega
+    </em>
+    <br />
+
+    <hr />
+
+    <b>This is bold Tag</b>
+    <i>This is Italic tag</i>
+
+    <hr />
+
+    <!-- Basic Tags 
+    1.) Anchor tag (a) -> yeh kisi bhi text me link add krwata hai 
+    2.) Abbrevation Tag (abbr) tag - means jb uspr point krege to btaega ki uss link me kya hai
+    3)  List -> orderlist and unorderlist tag -> ul tag and li
+    4) img tag 
+    5) video tag 
+    6) audio tag
+    7)table tag
+
+-->
+
+    <a href="http://google.com" target="_blank"
+      >Hello this is anchor tag and target=black isse dusre page pr load hoga
+    </a>
+
+    <abbr
+      title="Hey this is used when we point to the element it shows ki kya open hoga"
+      ><a href="http://instagram.com">instagram</a>
+    </abbr>
+
+    <hr />
+
+    <!-- unorder list -> jiske aage dot aate hai  and ul ke andr li tags hote hai -->
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+    </ul>
+
+    <!-- Order list -> 123 ABC abc i ii iii items iss format me honge 
+        and same ol ke andr li tag
+        number ko change bhi kr skte hai  simply we write ol type= "a,i,A,,I"-->
+
+    <ol type="I">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ol>
+
+    <hr />
+
+    <!-- image tag -> img - src - file path or agr google se leni img direct to copy image address 
+    width="400px" height ni denge agr sirf dono me se koi ik denge to automatically 400 400 ki hojegi 
+    alt -> agr img visible nhi hai ya path galaat hai to jo alt me likhege vo show hojega 
+    and it is inline elem -->
+    <img src="" alt="" /> <br />
+
+    <!-- video tag -> <video> attribute -> control autoplay="true" muted="true" pehele se muted hoti h , width="400
+        yeh bhi height me se koi ik denge automatically adjust krlega " 
+    it is also inline element -->
+    <video src="" controls autoplay muted width="400px"></video> <br />
+    <hr />
+
+    <!-- audio tag -> <audio> -> attributes - controls autoplay muted 
+         -->
+    <audio src="" controls autoplay muted></audio> <br />
+    <hr />
+
+    <!-- Table tag -> note-> jb tk tr chlra hai means ik row ki baat krre hai
+     -->
+    <table>
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Protein</th>
+          <th>Fat</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>Egg</td>
+          <td>6grm</td>
+          <td>3.5grm</td>
+        </tr>
+
+        <tr>
+          <td>Egg white</td>
+          <td>3.5grm</td>
+          <td>1grm</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+
+    <!-- Lecture 3  - Forms -->
+
+    <!-- Non semantic Tags -->
+
+    <!-- 1. span tag -> ime kuch bhi daal skte hai kuch specify nhi hai , It is inline element
+        2. div tag -> isme bhi kuch bhi daal skte hai, it is like an empty box, mostly developers use this div tag.
+        It is block element
+    -->
+
+    <span>Hello</span>
+    <span>Arsh this side</span>
+
+    <hr />
+
+    <!-- semantic tag -> 
+    means jo dekh kr pta lg jaye ki kis bare me baat hori hai like 
+    1.) article tag 2.) p tag 3.) Header tag 4) nav tag 5) section tag 6) footer tag  
+    we can mostly use div tag instead of these
+    -->
+
+    <!-- Css Selector 
+    1.) id selector - which is unique in whole html 
+    2) class -> when we have to select multiple tags 
+    
+    Note -> yeh har tag ke aage lgate hai taki hum access kr paye easily for styling and applying the logic
+
+    we can give multiple classes to 1 element but id is unique in one whole html and in one tag also 
+
+    -> to access the id we use # (#idName) 
+    -> to access the id we use.  (.className ) 
+    -->
+
+    <h1>CONTACT US</h1>
+    <form action="" method="POST">
+      <!-- note -> jo hum data enter krke submit krre the  to sara data url me show hora tha which is not good
+        so method POST action -> isme backend ki file ka link denge -->
+
+      <!-- Required attribute -> yeh agr likhege to details enter krna compulsory hai in "INPUT TAG" -->
+      <div>
+        <label for="">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          required
+          placeholder="enter your name"
+        />
+      </div>
+      <br />
+      <!-- name -> jb koi bhi form submit krega toh  jo bhi data hoga vo data database me store hoga
+        vo kese store hoga kese pta lgega kaise pta lgega toh jo name hai eg: 
+        name="name" or body me entry krwai name ki "Arshdeep" to database me save hoga [name = Arshdeep] 
+        eg2: name="username" and input tag me value dali humne Arsh30 to db me store hoga [username="arsh30"]
+
+        Note:-> input tag is inline element
+    -->
+
+      <div>
+        Email:
+        <input type="email" name="userEmail" id="email" required />
+      </div>
+      <br />
+
+      <div>
+        Message:
+        <textarea name="UserMessage" id="message" cols="30" rows="5" required>
+        </textarea>
+      </div>
+      <br />
+
+      <div>
+        Number:
+        <input type="number" name="number" id="number" required />
+      </div>
+      <br />
+
+      <div>
+        gender:
+        <select name="usergender" id="gender">
+          <!-- Value = me jo bhi value pehle se hogi vo database me vo chli jaegi 
+          gender: this is label  -->
+          <option value="">choose one</option>
+          <option value="male">Male</option>
+          <option value="female">FeMale</option>
+        </select>
+      </div>
+      <br />
+
+      <div>
+        Frontend:
+        <input type="checkbox" name="skills" id="Frontend" />
+        Backend:
+        <input type="checkbox" name="skills" id="Backend" />
+        <!-- Note -> agr name attribute dono ko same denge to dono me se koi ik select hoga -->
+      </div>
+      <br />
+
+      <div>
+        <fieldset>
+          <!-- fieldset tag -> isse ik box aajega jo bhi isme likhege usme type hoga -->
+          cash: <input type="radio" name="payment" id="cash" /> Bank:
+          <input type="radio" name="payment" id="bank" />
+        </fieldset>
+      </div>
+      <br />
+
+      <div>
+        Password:
+        <input type="password" name="password" id="password" />
+      </div>
+      <br />
+
+      <input type="submit" value="Submit" />
+      <!-- jo bhi value me likhege vo show hoga -->
+    </form>
+  </body>
+</html>

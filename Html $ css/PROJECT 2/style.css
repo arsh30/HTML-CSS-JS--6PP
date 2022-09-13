@@ -1,0 +1,178 @@
+body {
+  margin: 0px;
+}
+
+nav {
+  /* border: 2px solid green; */
+  height: 3vmax;
+  display: flex;
+  box-shadow: 0 0 10px rgb(58, 56, 56);
+  position: sticky;
+  top: 0; /* fixed banne ke liye we use this*/
+  background-color: white;
+  z-index: 10000; /* z index sabse high rkha because image ka z index jyda tha to vo overlap hori thi, to iska bnadiya  index sbse heigh */
+}
+
+.left-logo {
+  /* border: 2px solid red; */
+  width: 20%;
+  display: flex;
+  justify-content: center; /* note: justify jisko deni hai ussi ko hum flex denge*/
+}
+
+.left-logo > a {
+  text-decoration: none;
+  color: crimson;
+  font-size: 2vmax;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mid-menu {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 2px solid red; */
+}
+
+.mid-menu > a {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4vmax;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.mid-menu > a:hover {
+  color: crimson;
+  border-bottom: 2px solid red;
+}
+
+.right-cartLogo {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-cartLogo > img {
+  width: 2vmax;
+}
+
+/* SECTION PART STARTS: IE HOME SECTION */
+
+.home {
+  height: 90vh;
+  /* background-image: linear-gradient(
+    to right,
+    rgb(124, 187, 192),
+    rgb(184, 184, 223)
+  ); */
+  background-image: radial-gradient(
+    rgb(239, 221, 255),
+    rgb(184, 184, 223)
+  ); /*1st parameter bhar se hoga left side  */
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  /* border: 1px solid green; */
+}
+
+#rightContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#rightContainer > img {
+  margin-right: 6vmax;
+  filter: drop-shadow(
+    0 0 20px black
+  ); /* to add the shoow in the backgroudn of the img*/
+}
+
+#leftContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 3vmax;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+
+#leftContainer > h1 {
+  font-size: 5vmax;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#leftContainer > h2 {
+  margin-top: -10%;
+  font-size: 2vmax;
+  font-family: sans-serif;
+}
+
+#leftContainer > p {
+  margin-left: 2%;
+  font-size: 1.2vmax;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#leftContainer > button {
+  width: 11vmax;
+  padding: 0.6vmax;
+  border: none;
+  border-radius: 2vmax;
+  background-color: crimson;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
+#leftContainer > button:hover {
+  background-color: rgb(155, 18, 46);
+}
+
+/* PRODUCTS ================== */
+#products {
+  height: 100vh;
+  border: 1px solid green;
+}
+
+#products > h1 {
+  text-align: center;
+  margin: 5vmax auto;
+  font-size: 2.5vmax;
+  border-bottom: 4px solid crimson;
+  width: 25vw;
+  padding: 1vmax;
+}
+
+.productsContainer {
+  display: flex;
+  background-color: aqua;
+  height: 100%;
+  max-width: 80vw;
+  margin: auto;
+}
+
+.product {
+  border: 2px solid crimson;
+  width: 22vmax;
+  height: 33vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1vmax;
+}
+
+
+.product > img {
+  border: 2px solid crimson;
+  width: 20vmax;
+}

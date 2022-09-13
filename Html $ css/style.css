@@ -1,0 +1,736 @@
+/* 
+1) CSS - Cascading style sheets - used for t=stlying the web pages means add the backgroudn color change font etc
+2) div { color: red};  - div is the element selector,
+3) How to add css in html -> 
+    Three ways to add css properties
+    1) Inline element -> Means html element ke sth hi hum style de skte hai
+        eg:  <h1 style="color: blue;">WELCOME TO CSS LECTURE</h1>
+
+    2) Internal css -> means we can give styling using the STYLE Tag in HEAD Tag
+        eg:  <style>
+                    h1 {
+                        color: blue;
+                        background-color: cadetblue;
+                    }
+                    </style>
+
+    3) External css -> means make a seperate cs file and include in html  [Mostly we use this use ]
+    
+                    Priorities -> inline >  internal > external
+                eg:
+                    h1 {
+                    color: red;
+                    }
+*/
+
+/* 
+####  5th Lecture CSS Selector in DEPT 
+
+1) Element selector -> element/Tag Name {properties key value form } eg: div { color : red};
+2) Universal Selector -> * { properties: in KEY VALUE } -> 
+    Universal means jitni bhi elements (head,body ,p ,a etc) hai sbke upr apply hojegi yeh properties
+                    
+    * {
+        color: aqua;
+        background-color: black;
+        }
+
+        h1 {
+        color: red;
+        }
+
+        h1 {
+        color: gold; 
+        }
+
+
+
+        Note -> 1.  universal selector agr diya hai or uske baad ya pehle element selector ya koi or selector
+            Toh vo apply hojega instead of universal oeprator ,  
+
+                2. Jo properties baad me denge vo over ride hojegi uss pr
+
+
+   */
+
+/* * {
+  color: aqua;
+  background-color: black;
+} */
+
+/* 
+    3) CLASS SELECTOR (.)
+    Now we  want ki sirf 2nd wala p tag ka color chnge ho bakio ka nahi to we use p tag 
+    To we Use CLASS Selector (.) so pure html me dhundega ki kidr yeh second claas hai
+    eg:
+        .second {
+        color: red;
+        }
+*/
+
+/* 
+
+4) ID selector (#)
+Now we want ki 1st wale ka color chnge hoje, id selector is unique in whole html
+id access krege using #idName { set proeprty }
+
+eg:
+        #first {
+        color: gold;
+        }
+
+*/
+
+/* 
+5) Change the color of a tag: we want ki sirf instagram wale ka color change baki sabka color
+    same rhe
+
+*/
+/* a[href="google"] {
+  pass the href link a tag ko target kra
+  color: red;
+} */
+
+/*
+  6) chnage the color of span,div,em,h1 in sabka color change krna chahte hai
+    => so dot lgakr hum element pass krke color change kr skte hai
+    eg:
+        span,h1,div,em{ classes bhi paas kr skte hai
+        color:red
+    }
+ */
+
+/* 
+7) child selector -> eg: span ke andr jo p tag uska color change hoje
+
+    Note -> span ke andr sirf next wale sabko properties deta hai 
+
+    span > p {
+        color:rgb(147, 249, 5)
+    }
+
+    or 2nd way  space dalkr bhi kr skte hai 
+    span p {
+        color: rgb(200, 28, 57);
+    }
+
+    li {
+      list-style-type: disc;
+      color: red;
+    }
+*/
+
+/* 
+    8) Descendent comn=bination selector -> 
+    Note -> li li means li ke andr next li dhundega usko properties dega
+
+    li li {
+      color: aqua;
+    }
+*/
+
+/*
+9) Adjacent sibling selector (+) -> means just baad wala select hojega jo uske adjacent hoga bilkul means sth  
+ 
+    h1 + p {
+        means h1 ke andr uska adjacent siblinge first wala ie p 
+        Note: child ko nahi leta 
+    color: brown;
+    }
+
+*/
+
+/* 
+10) General Sibling selector (~) -> means jitni bhi sae sibling honge unsbko select krlega
+        h1 ~ p {
+        color: rgb(249, 220, 56);
+        }
+ */
+
+/* ---------Lecture 6) CSS PROPERTIES ----------- */
+
+/*
+ 1) color: red; // used to color text color
+ 2) background-Color: aqua // chnage background color
+ 3) font-family: select any; // chnage the font we can also use google fonts and paste in html file in head tag and in react paste in index.css/app,css main file
+ 4) font-size: large,medium,small, 20px, etc; // font ka size adjust ho skta hai issee
+ 5) font-style : italic, // font ka style change hojega
+ 6) font-weight: 100 to 900;  // means Kitna bold rakhna hai jitni jyda value utna jyda bold
+ 
+ 7) text-align: left (default), center, right, justify ; // means jo jo text hai ya block hai unko left,right side move krdega  
+        => justify value is -> agr koi text right side me pura nahi aa para toh vo next line me le aayega
+
+ 8) text-transform: capitalize; // means har word ka sirf first word capital hoga      
+    text-transform: lowercase; // means har word ka sirf first word lowerize hoga      
+    text-transform: uppercase ; // means sare word capital hoga   
+    
+ 9) text-decoration: underline; //sara text underline hojega
+    text-decoration: overline; //sara text ke upr overline aajegi
+    text-decoration: linethrough; //sara text ke center pr line aajegi
+
+ 10) text-indent: 30%; // means jitne bhi paragraphs honge ya text honge unme starting me left margin aajega 30%
+ 11) line-height:20px; // har line ke bich me 20px ka gap ajjega
+ 12) letter-spacing:20px; // har letter ke bheech me 20px ka space aajega
+ 13) word-spacing:20px; // har word ke bheech me 20px ka space aajega
+ 14) text-shadow : 0(x cordingte me shadow move hojegi) 0(y coordinate me shadow move hogi bahr ki trf) 5px (kitna blur chaiye) black (konsa color); // shadow aajegi uss jagah
+ 
+ 
+ 15) background-image: url(pass the full path or copy image address if take from online)
+    [ye lgane se image repeat hongi so we use property => background-repeat:no-repeat
+
+ 16) background-repeat: no-repeat;  // background-image j isse image repeat hori thi ab nhi hogi
+     background-repeat: repeat-x;  // repeat only in x direction
+     background-repeat: repeat-y;  // repeat only in y direction
+
+ 17) background-attachment: fixed; // image jo hai ik posiiton pr fixed hojegi permanently, baki content scrol hoga but images move nhi hogi
+ 18) background-size:cover; // ik pura cover bnkr puri window me lgjaegi
+ 19) backgorund-position:10px (x axis se image move hojegi) 10px(y axis); 
+     backgorund-position:top;
+     backgorund-position:left;
+     backgorund-position:center;
+     backgorund-position:25% 75%;
+     backgorund-position: bottom 50px right 50px;  // means bottom se 50 px hoje right side 50px
+
+*/
+
+/* Lecture 7 -> CSS UNITS */
+
+/* 
+    Types of unit: 
+    1) Relative unit -> means jiski koi value fix nahi h. eg 20% paise do apne
+        1.1) Percentage (%) 100% -> percent means apne parent ka size dekhega jitna uska usee 100% me khud
+            eg: iska parent hai body uska koi bhi size nhi de rkha means default hai ie 16px
+       
+        1.2) em -> 1em = 100%; // yeh bhi apne parent ka jitna size hoga uske acc size lega apna
+
+        1.3) rem -> root element  ki baat krta hai ie HTML bydefault html ka size 1rem = 16px. mostly use this , px, or %
+
+        1.4) vw -> eg 10vw => means jo bhi width hai hai ie 100 vh uska 10vw lega. or jo bhi width hai uska 10%
+
+        1.5) vh -> eg 10vh => means 10vh puri screen 100 vh usme se 10 vh height iski hojegi
+
+        1.6) vmin -> 10vmin - ye check krega ki height or width kya h page ki, dono me se jo kam hoga ie height uska 10% lelega
+
+        1.7) vmax -> 10vmax - ye check krega ki height or width me se kon jyda hai ie width to uska 10% leelga width ka
+
+        1.8) px -> means jitna denge utne pixels fixed hojege har jgh
+*/
+
+/* 
+Lecture 8 -> CSS BOX MODEL 
+
+    body {
+  font-size: 20px;
+  background-color: aqua;
+}
+
+ul {
+  list-style-type: decimal;
+  list-style-type: circle;
+  list-style-type: lower-alpha;
+  list-style-type: disc;
+
+  list-style-position: inside; isse andr ki trf hojegi items thodi
+  list-style-position: square inside;  isse andr ki trf hojegi items thodi
+}
+
+
+BOX MODEL ->  vvv imp 
+
+Note -> jo bhi element bnate hai css me vo iss format me hoti h 
+    content -> padding -> border -> margin
+
+    .small {
+    border: 5px solid black;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    //  means padding andr ka jo content ka vo move hoga  
+    margin: 20px;
+    /* 
+    margin: means jo bhar se cheez move hogi to ie margin 
+    Note: 1. agr margin:20px ie top right bottom left 
+            2. agr margin: 20px 20px; from top right bottom left
+
+            Total height: content + padding + border + margin
+    */
+
+/* ab content jo hai overflow hora hai so we use overflow property */
+/* overflow: hidden; means jitna uske andr aakta hai height me utna aayega jo bhi overflow hora hoga vo hatjaega
+     overflow: scroll;
+    overflow: auto; 
+    }
+
+    .ok {
+    background-color: orange;
+    }
+
+    .ok > h1 {
+      border: 2px solid black;
+      /* andr wala space bdana hai kya de padding ya margin? ans: padding 
+      padding: 10px;
+    }
+*/
+
+/* Lecture 9-> CSS STYLING LAYOUT  EXERCISE 01
+    
+Note  -> as a beginner koi bhi element start krre hai usko border dedo leight sa then wok kro jab
+        sab hojega tab htado border
+
+  * {
+   body ka khud ka margin hota hai toh yeh sabse phle har website me denge
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* border box ->  isse height jo hmari increase hori this margin,padding ko add krke
+  vo nhi hogi ab ussi me sab fix krlega 
+  scroll-behavior: smooth;
+}
+header {
+  background-color: aqua;
+  padding: 50px;
+}
+
+header > a {
+  color: black;
+  text-decoration: none;
+  margin: 0px 20px;
+}
+
+section {
+  /* border: 2px solid black; =
+  height: 600px;
+  width: 1000px;
+  margin: auto;
+  =>  margin - auto apne aap center me le aayega 
+  =>  Note -> argin sirf work krti hai with  block level element , and width set honi chiye
+  
+  background-image: linear-gradient(to bottom, crimson, rgb(214, 190, 195));
+  To bottom means niche ki trf jana chaiye, gradient means 2 3 color ka mixture 
+  text-align: center;
+  padding: 10px;
+}
+
+section > img {
+  width: 200px;
+}
+
+footer {
+  width: 1000px;
+  border: 2px solid black;
+  height: 100px;
+  width: 1000px;
+  margin: auto;
+  background-color: rgb(31, 27, 27);
+  text-align: center;
+  padding: 50px;
+}
+
+footer > a {
+  text-decoration: none;
+  color: white;
+  /* border: 2px solid red; border lgakr dekhre hai ki inline hai ya nahi width dekh kr pta lgjaega */
+
+/* Note::: 
+     1. agr hum chahte hai ki about pr click kre to niche scroll hoje to jo anchor tag hai uske href without / hum id likhege jo
+    footer ko di thi
+  
+    }
+*/
+
+/* Lecture 10 -> FLOAT, DISPLAY, POSITION */
+
+/*
+
+<body>
+    <div id="first">1</div>
+    <div id="second">2</div>
+    <div id="third">3</div>
+    <!-- shortcut div*3{$} to we get 3 divs -->
+  </body>
+
+body {
+  border: 2px solid black;
+}
+div {
+  width: 100px;
+  height: 100px;
+}
+#first {
+  background-color: burlywood;
+  float: left;
+}
+#second {
+  float: left;
+  background-color: rgb(223, 144, 40);
+  clear: left;
+}
+#third {
+  float: right;
+  background-color: aqua;
+  clear: left;
+}
+
+       1) abhi yeh teeno div body ke andr hai jese hi float property denge to yeh yeh element hava me float krege
+
+      2) we want ki 2nd div right corner me aaje ->
+
+        Float -> means vo element hava me udhra hai so they can over ride
+        eg: div 2 second row me tha usko floatt property di to hava me udhra tha or 3rd wale ne dekha ki kahli hai to
+        vo 2nd wale ki div par aagya and 3rd wala right corner hava me hi hai abhi bhi hava me
+      
+      3) agr first wale ko bhi float di toh left di to vo bhi hava me float krta rhega and second wala float krra right me
+         to jese hi first wala float kra to 2nd wala niche se upr aagya aisa kyu hua? 
+
+         
+      4) ab hum chahte hai ki first wala element float  bhi krta rhe or 2nd wale pr effect bhi na ho
+      so we use clear property: jiske pr effect nahi dena
+
+       clear :left  means 2nd wale ko btadiya ki float property lgaegi tere upr jbrdsti to clear krde
+      left side se aayegi float property
+      
+      Note -> jis element ko bolege ki agr usse float property milri hai toh clear agr humko use nhi krni toh
+
+
+
+      DISPLAY PROPERTIES -> 
+      display: inline; -> means ik row me jitni space hogi usme aajega
+      display:block; -> puri row cover krega'
+      display inline-block -> means dono apply hojegi isse
+
+
+      POSITIONS PROPERTIES -> 
+      there are 4 types of position => static (default), relative,absolute,fixed 
+        
+      
+        body {
+            height: 700px;
+            border: 2px solid black;
+            }
+        div {
+        width: 100px;
+        height: 100px;
+        }
+        #first {
+        background-color: cadetblue;
+        /* position: static; */
+/* position: relative; */
+/* relative lenge -> isse ik power unlock hogyi ie top left right bottom
+        define -> relative to its normal position [means jo bhi element hai vo actual position 
+        se change hoga] */
+/* position: absolute; */
+/* position absolute -> means its relative to its first parent 
+            yeh abhi apni parent ki potiion se utne ka distance bnalega
+
+      width: initial;
+      top: 20px;
+      left: 50px; 
+
+       position: sticky;
+      top: 0px; 
+       position sticky means top se itni dur fixed rhegi sara content move hoga yeh move nhi hogi 
+        and posiion:fixed ke sth top right me se bhi kuch denge even sari properties ke sth denge top right
+        
+
+      position: fixed;
+      bottom: 50px;
+      right: 50px;
+       position:fixed -> means ik jgh pr fixed hojega permanently 
+      
+    }
+    #second {
+      background-color: rgb(106, 245, 25);
+       position: absolute; 
+       top: 20px;
+      left: 50px; 
+    }
+        #third {
+        background-color: rgb(255, 153, 0);
+        position: absolute; 
+        top: 20px;
+        left: 50px; 
+        }
+    </style>
+    <body>
+        <div id="first">NAVBAR</div>
+        <div id="second">2</div>
+        <div id="third">3</div>
+    </body>
+        
+*/
+
+/* Lecture 11 -> FORM  */
+/* 
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+form {
+  border: 2px solid red;
+  max-width: 800px; /* max-width -> total intni hi lega
+  margin: auto;
+  background-color: rgb(162, 188, 234);
+  padding: 20px;
+  font-size: large;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+h1 {
+  text-align: center; -> to make in center
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  outline: none; -> click krne pr highlight border ajata hai vo remvoe krta hai
+}
+
+form > div {
+  margin: 10px auto;
+  width: 700px;
+}
+
+input[type="submit"] {
+  width: 120px;
+  font-size: medium;
+  font-weight: 400;
+  padding: 6px;
+  display: block;  input tag ki display -> inline hoti
+  margin: 20px auto;   taki center me ajae
+
+  border: none;
+  background-color: crimson;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(228, 93, 120);
+}
+ */
+
+/* 
+Lecture 12 debug css in chrome 
+
+kahin bhi agr debug krna hai -> right click -> inspect -> element -> jo bhi element pr click rkege
+                    -> edit kr skte hai udr element -> niche css aajegi -> hata kr bhi dekh skte hai properties
+            
+*/
+
+/* Lecture 13 -> PROJECT 01  */
+
+/* * {
+  margin: 0px;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-image: url("./bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 110vh;
+}
+
+header {
+  /* border: 2px solid white; -> Note -> jbhi koi elem pr kam krre hai to border dedenge as a beginner 
+  padding: 20px;
+  color: white;
+  position: sticky;
+  top: 0px;
+}
+
+/* 
+0 jo jo tags bnaye hai sbko border dednge first as a beginner
+1 step we want ki niche wala box upr right corner me aaje - so we use float property
+
+
+.logoBox {
+  display: inline-block;  because hum chahte hai ki niche wala navbox upr aaje 
+  width: 150px;
+  font-size: larger;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.navBox {
+  width: 600px;
+  display: inline-block; dono ko width dedi taki vo ik row me aaje ie why inline-block diya 
+  position: absolute;
+  right: 30px;
+}
+
+.navBox > a {
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+}
+
+#home {
+  color: rgb(240, 49, 28);
+}
+
+.navBox > a:hover {
+  color: rgb(240, 49, 28);
+}
+
+h1 {
+  color: rgb(240, 49, 28);
+  font-size: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+   border: 2px solid white;
+  position: relative;
+  top: 50px;
+  left: 70px;
+  width: 500px;
+} 
+
+/* h1 + h3 {
+  color: white;
+  font-size: 60px;
+   border: 2px solid white; 
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  top: 70px;
+  left: 80px;
+}
+
+h1 + h3 + p {
+  color: white; */
+/* border: 2px solid red; */
+/* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  position: relative;
+  top: 80px;
+  left: 80px;
+  width: 400px;
+  word-spacing: 6px;
+  font-style: italic;
+}
+
+.btn {
+  width: 150px;
+  padding: 10px;
+  color: black;
+  border: 2px solid salmon;
+  background-color: salmon;
+  position: relative;
+  top: 120px;
+  left: 80px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: larger;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgb(241,241,,241,0);
+    color:white;
+} */
+
+/* Lecture 14 HOW TO MAKE RESPONSIVE WEBSITE  */
+
+/* RESPONSIVENESS -> Means device ke according change krle px ie responsiveness */
+
+/* <style>
+      body {
+        background-color: rgb(255, 222, 180);
+      }
+
+      div {
+        height: 120px;
+        width: 120px;
+        background-color: brown;
+        margin: 40px;
+         Try to use vw instead of pixel in responsiveness 
+      }
+
+      @media all and (max-width: 600px) {
+        means jo iske andr likhege vo max width 600 px
+        body {
+          background-color: aqua;
+          /* to iske andr hum apna navbar bdl skte hai width vgara adjust kr skte hai 
+          Note: overflow: property agr kaam nahi kregi toh body ko denge 
+          
+          basic math -> 400px kitna percent hai 1920px ka? 400 % 1920 * 100
+        
+        }
+        div {
+          background-color: greenyellow;
+        }
+      }
+    </style> */
+
+/* Lecture 15 -> FLEX BOX ------------------- */
+
+/*
+      Q) WHAT IS FLEXBOX?
+
+      SOL) eg div is a flexbox, jitne div hote hai vo sare incline hoti ya block hoti 
+          jis bhi cheez ko div bnate hai toh vo ik div container bn jaega ab usme jo bhi aayega
+          vo ya toh raw format me hoga, ya column format me hoga
+
+          x axis -> is main axis, (0,0 is main start (left)) and (9,9 is main end (right direction))
+          y axis -> cross axis, (9,9 in y direction is cross start (upward direction )) and (-9,-9 in y direction is cross end basically downward side)
+    
+   
+          Note -> ab jis container flex bnadiya usme jo cheeze aayegi ie flex items
+          vo item chahe inline ho ya block aayege vo row me hi because row is the main direction
+
+          [Note -> it is easy because pehle hota tha ki float/position use kro etc but now isse sb hojata h]
+
+        
+        
+          // As we know div is block level element, so body ko flex container bnaege
+        o sare div row me ajege because default direction is in row format 
+
+        body {
+          margin: 0px;
+          width: 80vw;
+          height: 80vh;
+          display: flex;
+
+          /* properties of flex box 
+
+           Note -> justify content is for x axis ie main axis  and 
+          IMPORTANT NOT -> JUSTIFY CONTENT AND ALIGN ITEM FLEX BOX KO DENGE
+
+  justify-content: center;  justify cntent -> means isme jitni bhi item hai unki aat hori hai 
+  justify-content: flex-start;
+  justify-content: flex-end;
+  justify-content: space-around;  space around -> isse jitne bhi div hai sabka margin equal hojata hai - left or right corner wale item me bhi space aajega mean overall left or right me margin equally ajata hai
+  justify-content: space-between; /* space-between - iise 1st and last  item ke bheech me space nhi aayega 
+  justify-content: space-evenly; /* space evenly isse equally sabme space aayega koi sare boxes me equal spaces hojegi */
+
+/* align-items -> this is for cross axis Y axis 
+  align-items: center; /*similar properties hai 
+  align-items: flex-end;
+  align-items: start; 
+
+  flex-direction: column;
+  flex-direction: column-reverse;
+  flex-direction: row-reverse;
+  flex: wrap;
+  flex-wrap: wrap; // Jo box ka size hai vohi rhega change nahi hoga size
+  align-content: center; // agr wrap hone ke baad andr bhi space bnale to we use this property
+
+   Note-> justify-content is for x axis column ad align items for Y axis item ko along properites k liye 
+}
+
+ --> PROPERTES FOR FLEX ITEMS 
+.two {
+  /* align-self: flex-end; 
+}
+     
+*/
+
+

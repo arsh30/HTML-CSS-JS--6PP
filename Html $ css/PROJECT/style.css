@@ -1,0 +1,109 @@
+* {
+  margin: 0px;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-image: url("./bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 110vh;
+}
+
+header {
+  /* border: 2px solid white; -> Note -> jbhi koi elem pr kam krre hai to border dedenge as a beginner */
+  padding: 20px;
+  color: white;
+  position: sticky;
+  top: 0px;
+}
+
+/* 
+0 jo jo tags bnaye hai sbko border dednge first as a beginner
+1 step we want ki niche wala box upr right corner me aaje - so we use float property
+ */
+
+.logoBox {
+  display: inline-block; /* because hum chahte hai ki niche wala navbox upr aaje */
+  width: 150px;
+  font-size: larger;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+.navBox {
+  width: 600px;
+  display: inline-block; /* dono ko width dedi taki vo ik row me aaje ie why inline-block diya */
+  position: absolute;
+  right: 30px;
+}
+
+.navBox > a {
+  text-decoration: none;
+  color: white;
+  margin: 20px;
+}
+
+#home {
+  color: rgb(240, 49, 28);
+}
+
+.navBox > a:hover {
+  color: rgb(240, 49, 28);
+}
+
+h1 {
+  color: rgb(240, 49, 28);
+  font-size: 60px;
+  font-family: Arial, Helvetica, sans-serif;
+  /* border: 2px solid white; */
+  position: relative;
+  top: 50px;
+  left: 70px;
+  width: 500px;
+}
+
+h1 + h3 {
+  color: white;
+  font-size: 60px;
+  /* border: 2px solid white; */
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  top: 70px;
+  left: 80px;
+}
+
+h1 + h3 + p {
+  color: white;
+  /* border: 2px solid red; */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  position: relative;
+  top: 80px;
+  left: 80px;
+  width: 400px;
+  word-spacing: 6px;
+  font-style: italic;
+}
+
+.btn {
+  width: 150px;
+  padding: 10px;
+  color: black;
+  border: 2px solid salmon;
+  background-color: salmon;
+  position: relative;
+  top: 120px;
+  left: 80px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: larger;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover{
+    background-color: rgb(241,241,,241,0);
+    color:white;
+}
